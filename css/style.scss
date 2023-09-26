@@ -1,0 +1,50 @@
+@mixin justify-align{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+body {
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: #fff;
+}
+
+.wrapper {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.main {
+  flex-grow: 1;
+}
+
+.header {
+  background-color: #010535;
+  &-top{
+    .container {
+      @include justify-align();
+      line-height: 30px;
+      font-size: 24px;
+      padding: 20px 0 30px;
+    }
+
+    &-left__address {
+      text-align: left;
+    }
+  }
+
+  &-center {
+    background-color: #8c8d9c;
+    .container {
+      @include justify-align();
+    }
+  }
+}
