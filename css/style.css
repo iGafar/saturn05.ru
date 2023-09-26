@@ -1,8 +1,9 @@
 body {
   font-family: "Yanone Kaffeesatz", sans-serif;
-  font-size: 14px;
+  font-size: 24px;
   font-weight: 400;
   color: #fff;
+  overflow-x: hidden;
 }
 
 .wrapper {
@@ -14,6 +15,7 @@ body {
 .container {
   max-width: 1200px;
   margin: 0 auto;
+  padding: 0 10px;
 }
 
 .main {
@@ -29,16 +31,78 @@ body {
   align-items: center;
   line-height: 30px;
   font-size: 24px;
-  padding: 20px 0 30px;
+  padding-top: 20px;
+  padding-bottom: 30px;
 }
 .header-top-left__address {
   text-align: left;
 }
+.header-top-line {
+  display: inline-block;
+  width: 100vw;
+  height: 4px;
+  background: #fff;
+}
 .header-center {
   background-color: #8c8d9c;
+  padding: 10px 0;
 }
 .header-center .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+.header-center__search {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5px;
+}
+.header-center__text {
+  height: 28px;
+  width: 200px;
+  background-color: #8c8d9c;
+  border: 1px solid #2c305d;
+  border-radius: 5px;
+}
+.header-center__nav-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+.header-center__nav-list-item {
+  position: relative;
+  display: inline-block;
+}
+.header-center__nav-list-item:hover {
+  cursor: pointer;
+}
+.header-center__nav__intelligence {
+  position: absolute;
+  display: none;
+  flex-direction: column;
+  background-color: #8c8d9c;
+  padding: 10px;
+  border-radius: 5px;
+  gap: 5px;
+  top: 30px;
+}
+.header-center__nav__intelligence-active {
+  display: flex;
+  z-index: 2;
+}
+.header-bottom {
+  padding: 5px 0 20px;
+}
+.header-bottom-line {
+  display: block;
+  width: 100%;
+  height: 4px;
+  background-color: #fff;
+  margin: 5px 0 20px;
+}
+.header .swiper-slide {
+  display: flex;
+  justify-content: center;
 }/*# sourceMappingURL=style.css.map */
