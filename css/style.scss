@@ -31,6 +31,10 @@ body {
   flex-grow: 1;
 }
 
+h1 {
+  font-size: 38px;
+}
+
 h2 {
   font-size: 34px;
 }
@@ -49,7 +53,7 @@ h2 {
       button {
         background-color: #010535;
         padding: 5px;
-        border-radius: 5px
+        border-radius: 5px;
       }
     }
   }
@@ -283,6 +287,80 @@ h2 {
   }
 }
 
+.pathway {
+  color: #000;
+  margin-bottom: 20px;
+}
+
+.about {
+  color: #000;
+  margin-bottom: 50co px;
+
+  .container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    .about-main {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    h2,
+    h3 {
+      font-weight: 600;
+      margin-bottom: 15px;
+    }
+
+    h2,
+    h3,
+    .about-name {
+      color: rgb(255, 0, 0);
+    }
+
+    .about-name {
+      margin-bottom: 5px;
+    }
+
+    & > p {
+      margin-bottom: 15px;
+    }
+  }
+}
+
+.contacts-page {
+  color: #000;
+  margin-bottom: 30px;
+  .container {
+    h1 {
+      margin-bottom: 10px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+
+      label {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        max-width: 350px;
+
+        input, textarea {
+          padding: 7px;
+          border-radius: 5px;
+        }
+        .form-button:hover {
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
 .footer {
   background-color: #010535;
   padding: 15px 0;
@@ -341,14 +419,14 @@ h2 {
     li {
       display: flex;
       flex-direction: column;
-    justify-content: flex-start;
+      justify-content: flex-start;
 
       gap: 10px;
       padding-left: 25px;
       position: relative;
 
       &:first-child::before {
-        content: '';
+        content: "";
         background: url(../images/icons/contacts_num.png) no-repeat;
         background-size: contain;
         position: absolute;
@@ -358,7 +436,7 @@ h2 {
       }
 
       &:nth-child(2)::before {
-        content: '';
+        content: "";
         background: url(../images/icons/contacts_mail.png) no-repeat;
         background-size: contain;
         position: absolute;
@@ -369,7 +447,7 @@ h2 {
       }
 
       &:nth-child(3)::before {
-        content: '';
+        content: "";
         background: url(../images/icons/contacts_address.png) no-repeat;
         background-size: contain;
         position: absolute;

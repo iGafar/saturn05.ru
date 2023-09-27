@@ -23,6 +23,10 @@ body {
   flex-grow: 1;
 }
 
+h1 {
+  font-size: 38px;
+}
+
 h2 {
   font-size: 34px;
 }
@@ -238,6 +242,69 @@ h2 {
 .contacts__block-item:nth-child(3) {
   background: url(../images/icons/contacts_address.png) no-repeat;
   background-position: center 50px;
+}
+
+.pathway {
+  color: #000;
+  margin-bottom: 20px;
+}
+
+.about {
+  color: #000;
+  margin-bottom: 50co px;
+}
+.about .container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.about .container .about-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.about .container h2,
+.about .container h3 {
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+.about .container h2,
+.about .container h3,
+.about .container .about-name {
+  color: rgb(255, 0, 0);
+}
+.about .container .about-name {
+  margin-bottom: 5px;
+}
+.about .container > p {
+  margin-bottom: 15px;
+}
+
+.contacts-page {
+  color: #000;
+  margin-bottom: 30px;
+}
+.contacts-page .container h1 {
+  margin-bottom: 10px;
+}
+.contacts-page .container form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.contacts-page .container form label {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 350px;
+}
+.contacts-page .container form label input, .contacts-page .container form label textarea {
+  padding: 7px;
+  border-radius: 5px;
+}
+.contacts-page .container form label .form-button:hover {
+  cursor: pointer;
 }
 
 .footer {
