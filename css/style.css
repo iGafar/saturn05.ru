@@ -246,12 +246,12 @@ h2 {
 
 .pathway {
   color: #000;
-  margin-bottom: 20px;
+  margin-bottom: 50px;
 }
 
 .about {
   color: #000;
-  margin-bottom: 50co px;
+  margin-bottom: 50px;
 }
 .about .container {
   display: flex;
@@ -299,12 +299,41 @@ h2 {
   gap: 10px;
   max-width: 350px;
 }
-.contacts-page .container form label input, .contacts-page .container form label textarea {
+.contacts-page .container form label input,
+.contacts-page .container form label textarea {
   padding: 7px;
   border-radius: 5px;
 }
 .contacts-page .container form label .form-button:hover {
   cursor: pointer;
+}
+.contacts-page .container form .form-button {
+  background-color: RGBa(128, 128, 128, 0.3);
+}
+.contacts-page .container form .form-button:hover {
+  background-color: RGBa(128, 128, 128, 0.8);
+  cursor: pointer;
+}
+
+.private-training,
+.gun-sighting,
+.manager-promotion,
+.security-promotion,
+.consultation,
+.shooting-training,
+.drivers-promotion {
+  color: #000;
+  margin-bottom: 50px;
+}
+.private-training h2,
+.gun-sighting h2,
+.manager-promotion h2,
+.security-promotion h2,
+.consultation h2,
+.shooting-training h2,
+.drivers-promotion h2 {
+  margin-bottom: 40px;
+  font-weight: 600;
 }
 
 .footer {

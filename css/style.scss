@@ -289,12 +289,12 @@ h2 {
 
 .pathway {
   color: #000;
-  margin-bottom: 20px;
+  margin-bottom: 50px;
 }
 
 .about {
   color: #000;
-  margin-bottom: 50co px;
+  margin-bottom: 50px;
 
   .container {
     display: flex;
@@ -349,7 +349,8 @@ h2 {
         gap: 10px;
         max-width: 350px;
 
-        input, textarea {
+        input,
+        textarea {
           padding: 7px;
           border-radius: 5px;
         }
@@ -357,7 +358,31 @@ h2 {
           cursor: pointer;
         }
       }
+
+      .form-button {
+        background-color: RGBa(128, 128, 128, 0.3);
+        &:hover {
+          background-color: RGBa(128, 128, 128, 0.8);
+          cursor: pointer;
+        }
+      }
     }
+  }
+}
+
+.private-training,
+.gun-sighting,
+.manager-promotion,
+.security-promotion,
+.consultation,
+.shooting-training,
+.drivers-promotion {
+  color: #000;
+  margin-bottom: 50px;
+
+  h2 {
+    margin-bottom: 40px;
+    font-weight: 600;
   }
 }
 
