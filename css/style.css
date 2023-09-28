@@ -29,6 +29,7 @@ h1 {
 
 h2 {
   font-size: 34px;
+  font-weight: 600;
 }
 
 .header {
@@ -321,7 +322,11 @@ h2 {
 .security-promotion,
 .consultation,
 .shooting-training,
-.drivers-promotion {
+.drivers-promotion,
+.basic,
+.structure,
+.documents,
+.education-standart {
   color: #000;
   margin-bottom: 50px;
 }
@@ -331,9 +336,169 @@ h2 {
 .security-promotion h2,
 .consultation h2,
 .shooting-training h2,
-.drivers-promotion h2 {
+.drivers-promotion h2,
+.basic h2,
+.structure h2,
+.documents h2,
+.education-standart h2 {
   margin-bottom: 40px;
   font-weight: 600;
+}
+
+.structure p {
+  text-decoration: underline;
+  transition: all 200ms linear;
+}
+.structure p:hover {
+  color: #09c;
+}
+
+.documents__photos {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+.documents__photos-item {
+  width: 300px;
+}
+.documents__photos-item img {
+  width: 100%;
+}
+.documents__list {
+  margin-left: 30px;
+  color: #09c;
+  text-decoration: underline;
+}
+.documents__list-item:nth-child(n+10) {
+  margin-left: 8px;
+}
+
+.education {
+  margin-bottom: 50px;
+}
+.education h2 {
+  color: #000;
+  margin-bottom: 15px;
+}
+.education__list {
+  color: #09c;
+  text-decoration: underline;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.management {
+  color: #000;
+  margin-bottom: 50px;
+}
+.management .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.management h2 {
+  margin-bottom: 30px;
+}
+.management h3 {
+  margin-bottom: 30px;
+  font-size: 30px;
+  font-weight: 600;
+}
+.management table {
+  border: 1px #000 solid;
+  margin-bottom: 30px;
+}
+.management th, .management td {
+  padding: 10px;
+  border: 1px #000 solid;
+}
+
+.material {
+  color: #000;
+  margin-bottom: 50px;
+}
+.material h3 {
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+.material a {
+  text-decoration: underline;
+}
+.material a:hover {
+  color: #09c;
+}
+.material__list {
+  margin-bottom: 30px;
+}
+.material__list li {
+  margin-left: 20px;
+}
+.material__list li:nth-child(n+10) {
+  margin-left: 30px;
+}
+.material__links {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.paid-services {
+  color: #000;
+  margin-bottom: 50px;
+}
+.paid-services h2 {
+  margin-bottom: 30px;
+}
+.paid-services p {
+  text-decoration: underline;
+}
+.paid-services p:hover {
+  color: #09c;
+}
+
+.finance {
+  color: #000;
+  margin-bottom: 50px;
+}
+.finance h2 {
+  margin-bottom: 30px;
+}
+
+.vacant {
+  color: #000;
+  margin-bottom: 50px;
+}
+.vacant h2 {
+  margin-bottom: 30px;
+}
+.vacant br {
+  margin-bottom: 10px;
+}
+
+.intelligence {
+  color: #000;
+  margin-bottom: 50px;
+}
+.intelligence h2 {
+  margin-bottom: 30px;
+}
+.intelligence__list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.intelligence__list a {
+  display: inline-block;
+  padding: 5px 10px;
+  border: 1px #000 solid;
+  border-radius: 5px;
+}
+.intelligence__list a:hover {
+  text-decoration: underline;
+  color: #09c;
 }
 
 .footer {
