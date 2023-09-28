@@ -42,3 +42,10 @@ const swiper = new Swiper(".swiper", {
     clickable: true,
   },
 });
+
+const galleryItems = document.querySelector('.gallery__list').childElementCount;
+const galleryCount = document.querySelector('.gallery-count');
+
+galleryCount.innerHTML = galleryItems
+
+

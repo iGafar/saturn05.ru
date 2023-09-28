@@ -478,27 +478,64 @@ h2 {
   margin-bottom: 10px;
 }
 
-.intelligence {
+.intelligence, .services {
   color: #000;
   margin-bottom: 50px;
 }
-.intelligence h2 {
+.intelligence h2, .services h2 {
   margin-bottom: 30px;
 }
-.intelligence__list {
+.intelligence__list, .services__list {
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
-.intelligence__list a {
+.intelligence__list a, .services__list a {
   display: inline-block;
   padding: 5px 10px;
   border: 1px #000 solid;
   border-radius: 5px;
 }
-.intelligence__list a:hover {
+.intelligence__list a:hover, .services__list a:hover {
   text-decoration: underline;
   color: #09c;
+}
+
+.gallery {
+  color: #000;
+  margin-bottom: 50px;
+}
+.gallery h2 {
+  margin-bottom: 30px;
+}
+.gallery__list {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.gallery__list-item {
+  width: 260px;
+  height: 390px;
+  padding: 10px;
+  border: 1px rgba(0, 0, 0, 0.2) solid;
+  border-radius: 5px;
+  text-align: center;
+  transition: all 500ms ease-in;
+}
+.gallery__list-item:hover {
+  border-color: rgba(0, 0, 0, 0.4);
+}
+.gallery__list-item p {
+  margin-bottom: 10px;
+  overflow: hidden;
+}
+.gallery__list-item img {
+  width: 100%;
+  transition: all 200ms ease-in;
+}
+.gallery__list-item img:hover {
+  transform: scale(1.1);
 }
 
 .footer {
