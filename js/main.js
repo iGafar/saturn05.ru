@@ -43,9 +43,30 @@ const swiper = new Swiper(".swiper", {
   },
 });
 
-const galleryItems = document.querySelector('.gallery__list').childElementCount;
-const galleryCount = document.querySelector('.gallery-count');
+let galleryItems;
+let galleryCount;
+if (document.querySelector(".gallery__list") != null) {
+  galleryItems = document.querySelector(".gallery__list").childElementCount;
+  galleryCount = document.querySelector(".gallery-count");
+  galleryCount.innerHTML = galleryItems;
+}
 
-galleryCount.innerHTML = galleryItems
+const burger = document.querySelector(".burger");
+const burgerLine1 = document.getElementsByClassName("burger-item")[0];
+const burgerLine2 = document.getElementsByClassName("burger-item")[1];
+const burgerLine3 = document.getElementsByClassName("burger-item")[2];
+const menu = document.getElementsByClassName("header-center__nav")[0];
 
+console.log(menu.style.left === "0px");
 
+burger.addEventListener("click", function () {
+  if (menu.style.left === "0px") {
+    menu.style.left = '-100%'
+    burgerLine2.style.transform = 'translate(0)'
+    burgerLine3.style.transform = 'translate(0)'
+  } else {
+    menu.style.left = '0px'
+    burgerLine2.style.transform = 'translate(-5px)'
+    burgerLine3.style.transform = 'translate(-10px)'
+  }
+});

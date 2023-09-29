@@ -40,6 +40,11 @@ h2 {
   font-weight: 600;
 }
 
+h3 {
+  font-size: 30px;
+  font-weight: 600;
+}
+
 .header {
   background-color: #010535;
   margin-bottom: 30px;
@@ -48,8 +53,7 @@ h2 {
     padding: 5px;
     background-color: $back-gray;
     .container {
-      display: flex;
-      justify-content: center;
+      @include justify-align();
 
       button {
         background-color: #010535;
@@ -59,11 +63,24 @@ h2 {
     }
   }
 
+  .burger {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+    &-item {
+      display: inline-block;
+      width: 30px;
+      height: 3px;
+      background-color: #fff;
+      transition: all 200ms ease;
+    }
+  }
+
   &-top {
     .container {
       @include justify-align();
       line-height: 30px;
-      font-size: 24px;
       padding-top: 10px;
     }
 
@@ -112,6 +129,11 @@ h2 {
     &__search {
       @include justify-align();
       gap: 5px;
+    }
+
+    &__submit {
+      width: 34px;
+      height: 34px;
     }
 
     &__text {
@@ -164,7 +186,6 @@ h2 {
     }
 
     &__info {
-      font-size: 32px;
       width: 50%;
     }
 
@@ -196,7 +217,7 @@ h2 {
   &__title {
     background-color: #078d3d;
     text-align: center;
-    padding: 10px 0;
+    padding: 10px;
     margin-bottom: 15px;
   }
 
@@ -234,16 +255,17 @@ h2 {
   }
 
   &__block {
-    display: flex;
-    align-items: center;
+    @include justify-align();
+    flex-wrap: wrap;
     color: #000;
+    gap: 10px;
 
-    &-text {
-      width: 70%;
+    &-imgs {
+      display: flex;
     }
 
     &-img {
-      float: right;
+      display: inline-block;
     }
   }
 }
@@ -311,7 +333,6 @@ h2 {
 
     h2,
     h3 {
-      font-weight: 600;
       margin-bottom: 15px;
     }
 
@@ -463,8 +484,6 @@ h2 {
 
   h3 {
     margin-bottom: 30px;
-    font-size: 30px;
-    font-weight: 600;
   }
 
   table {
@@ -472,11 +491,11 @@ h2 {
     margin-bottom: 30px;
   }
 
-  th, td {
+  th,
+  td {
     padding: 10px;
     border: 1px #000 solid;
   }
-
 }
 
 .material {
@@ -484,7 +503,6 @@ h2 {
   margin-bottom: 50px;
 
   h3 {
-    font-size: 30px;
     margin-bottom: 10px;
   }
 
@@ -506,7 +524,6 @@ h2 {
         margin-left: 30px;
       }
     }
-
   }
 
   &__links {
@@ -514,7 +531,6 @@ h2 {
     flex-direction: column;
     gap: 10px;
   }
-
 }
 
 .paid-services {
@@ -532,7 +548,6 @@ h2 {
       color: #09c;
     }
   }
-
 }
 
 .finance {
@@ -555,10 +570,10 @@ h2 {
   br {
     margin-bottom: 10px;
   }
-
 }
 
-.intelligence, .services{
+.intelligence,
+.services {
   color: #000;
   margin-bottom: 50px;
 
@@ -614,6 +629,7 @@ h2 {
       p {
         margin-bottom: 10px;
         overflow: hidden;
+        border-radius: 5px;
       }
 
       img {
@@ -657,7 +673,6 @@ h2 {
     align-items: center;
 
     p {
-      font-size: 20px;
       margin-bottom: 10px;
     }
 
@@ -669,8 +684,6 @@ h2 {
 
   h3 {
     margin-bottom: 15px;
-    font-size: 1.5em;
-    font-weight: 600;
   }
 
   &__nav-list {
@@ -723,6 +736,192 @@ h2 {
         width: 20px;
         height: 20px;
       }
+    }
+  }
+}
+
+@media (max-width: 1000px) {
+  body {
+    font-size: 20px;
+  }
+
+  h1 {
+    font-size: 34px;
+  }
+
+  h2 {
+    font-size: 30px;
+  }
+
+  h3 {
+    font-size: 26px;
+  }
+}
+
+@media (max-width: 900px) {
+  body {
+    font-size: 16px;
+  }
+
+  h1 {
+    font-size: 30px;
+  }
+
+  h2 {
+    font-size: 26px;
+  }
+
+  h3 {
+    font-size: 22px;
+  }
+
+  .header {
+    &-top {
+      &__info {
+        flex-direction: column;
+        gap: 0;
+      }
+    }
+
+    &-center {
+      .container {
+        flex-direction: column;
+      }
+      &__nav {
+        font-size: 30px;
+        position: absolute;
+        background-color: #8c8d9c;
+        z-index: 2;
+        padding: 50px 0;
+        width: 100%;
+        transition: all 400ms linear;
+        left: -100vw;
+
+        &-list {
+          text-align: left;
+          flex-direction: column;
+          gap: 20px;
+        }
+
+        &__intelligence,
+        &__services {
+          display: none;
+        }
+      }
+    }
+
+    &-bottom {
+      &__info {
+        width: 60%;
+      }
+
+      .swiper {
+        width: 40%;
+      }
+    }
+  }
+
+  .school {
+    &__block {
+      justify-content: center;
+      flex-wrap: wrap;
+      &-img {
+        order: 1;
+      }
+
+      &-text {
+        width: 100%;
+      }
+    }
+  }
+
+  .driving {
+    &__block {
+      justify-content: center;
+    }
+  }
+
+  .contacts {
+    &__block {
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+  }
+
+  .structure {
+    .container {
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  body {
+    font-size: 14px;
+  }
+
+  h1 {
+    font-size: 18px;
+  }
+
+  h2 {
+    font-size: 18px;
+  }
+
+  h3 {
+    font-size: 16px;
+  }
+
+  .header {
+    &-top__logo {
+      a {
+        flex-direction: column;
+        gap: 0;
+      }
+    }
+
+    &-center__nav-list {
+      text-align: center;
+    }
+  }
+
+  .driving {
+    &__block-img:first-child {
+      width: 65%;
+    }
+
+    &__block-img:nth-child(2) {
+      width: 35%;
+    }
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .footer {
+    &-top {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 20px;
+      padding-bottom: 15px;
+    }
+
+    &__contacts-list {
+      li {
+        padding-left: 0;
+      }
+      li:before {
+        display: none;
+      }
+    }
+
+    &-bottom {
+      text-align: center;
     }
   }
 }
