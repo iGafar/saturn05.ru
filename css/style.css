@@ -348,7 +348,8 @@ h3 {
 .basic,
 .structure,
 .documents,
-.education-standart {
+.education-standart,
+.scholarship {
   color: #000;
   margin-bottom: 50px;
 }
@@ -362,9 +363,9 @@ h3 {
 .basic h2,
 .structure h2,
 .documents h2,
-.education-standart h2 {
+.education-standart h2,
+.scholarship h2 {
   margin-bottom: 40px;
-  font-weight: 600;
 }
 
 .structure p {
